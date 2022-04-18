@@ -96,11 +96,10 @@ function App() {
       <Input value={lastValue} readOnly />
       <div className="board">
         {KEYS.map((key) => (
-          <div className={key?.span ? "span-2" : ""}>
+          <div key={key.caption} className={key?.span ? "span-2" : ""}>
             <Button
               className="span-2"
               onClick={() => handleButtonClick(key)}
-              key={key.caption}
               {...key}
             />
           </div>
