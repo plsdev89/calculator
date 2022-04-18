@@ -1,0 +1,25 @@
+const KEYS = [
+  {
+    type: "init",
+    caption: "C",
+  },
+  { type: "axios", caption: "+/-" },
+  { type: "percent", caption: "%" },
+  { type: "divide", caption: "/" },
+  { type: "number", caption: "7" },
+  { type: "number", caption: "8" },
+  { type: "number", caption: "9" },
+  { type: "multiply", caption: "X" },
+  { type: "number", caption: "4" },
+  { type: "number", caption: "5" },
+  { type: "number", caption: "6" },
+  { type: "minus", caption: "-" },
+  { type: "number", caption: "1" },
+  { type: "number", caption: "2" },
+  { type: "number", caption: "3" },
+  { type: "plus", caption: "+" },
+  { type: "number", caption: "0" },
+  { type: "point", caption: "." },
+  { type: "result", caption: "=", span: true, redBtn: true },
+];
+export default KEYS;
