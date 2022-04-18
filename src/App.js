@@ -12,7 +12,6 @@ function App() {
   const [isResultSet, setIsResultSet] = useState(false);
 
   const calculate = useCallback(() => {
-    console.log(firstValue, lastValue);
     const num1 = parseInt(firstValue);
     const num2 = parseInt(lastValue);
 
