@@ -12,8 +12,8 @@ function App() {
   const [isResultSet, setIsResultSet] = useState(false);
 
   const calculate = useCallback(() => {
-    const num1 = parseInt(firstValue);
-    const num2 = parseInt(lastValue);
+    const num1 = parseFloat(firstValue);
+    const num2 = parseFloat(lastValue);
 
     if (!num1 || !num2 || !operator) return;
 
@@ -47,6 +47,17 @@ function App() {
     ({ type, caption }) => {
       switch (type) {
         case "number":
+          if (isResultSet) {
+            setIsResultSet(false);
+            setLastValue(caption);
+          } else {
+            setLastValue(lastValue + caption);
+          }
+          break;
+
+        case "point":
+          if (lastValue.includes(".")) return;
+
           if (isResultSet) {
             setIsResultSet(false);
             setLastValue(caption);
