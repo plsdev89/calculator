@@ -56,7 +56,7 @@ function App() {
           break;
 
         case "point":
-          if (lastValue.includes(".")) return;
+          if (`${lastValue}`.includes(".")) return;
 
           if (isResultSet) {
             setIsResultSet(false);
